@@ -49,7 +49,10 @@ class _SignupScreenState extends State<SignupScreen> {
           
                       TextFormField(
                         controller: name,
-                        decoration: InputDecoration(hintText: "Name"),
+                        decoration: InputDecoration(
+                          hintText: "Name",
+                          prefixIcon: Icon(Icons.person),
+                        ),
                         validator: (value) =>
                             value!.isEmpty ? "Name is required" : null,
                       ),
@@ -57,7 +60,10 @@ class _SignupScreenState extends State<SignupScreen> {
           
                       TextFormField(
                         controller: surname,
-                        decoration: InputDecoration(hintText: "Surname"),
+                        decoration: InputDecoration(
+                          hintText: "Surname",
+                          prefixIcon: Icon(Icons.person),
+                        ),
                         validator: (value) =>
                             value!.isEmpty ? "Surname is required" : null,
                       ),
@@ -65,7 +71,10 @@ class _SignupScreenState extends State<SignupScreen> {
           
                       TextFormField(
                         controller: email,
-                        decoration: InputDecoration(hintText: "Email"),
+                        decoration: InputDecoration(
+                          hintText: "Email",
+                          prefixIcon: Icon(Icons.email),
+                        ),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
                             return "Email is required";
